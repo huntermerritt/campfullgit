@@ -1,4 +1,3 @@
-alert("INSIDE MARKERS");
 var markers;
 markers = [
 { 'name': '10 acres campground', 'url': 'http://www.10acrescampground.com', 'lat': 44.0314, 'lng': -73.4035799 },
