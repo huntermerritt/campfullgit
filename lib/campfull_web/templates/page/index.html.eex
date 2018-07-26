@@ -1,36 +1,192 @@
-<div class="jumbotron">
-  <h2><%= gettext "Welcome to %{name}!", name: "Phoenix" %></h2>
-  <p class="lead">A productive web framework that<br />does not compromise speed and maintainability.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Hello Campin!</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin=""/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js" integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q==" crossorigin=""></script>
+    <script type="text/javascript" src="/js/mapsjavascript.js"></script>
+
+
+
+</head>
+<style>
+    body
+    {
+
+        background-image: url("/images/back.jpg");
+        background-size: cover;
+        font-family: 'Roboto', sans-serif;
+    }
+
+
+</style>
+<body>
+<sci>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="height: 10vh;">
+    <img src="/images/clogo.png" class="navbar-brand" alt="Camp Out" style="max-height: 10vh;">
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle navbar-item" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Choose State
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="height: 40vh; overflow-y: scroll;">
+          <button class="dropdown-item" onclick="changemap(32.806671, -86.791130);">Alabama</button>
+          <button class="dropdown-item" onclick="changemap(61.370716, -152.404419);">Alaska</button>
+          <button class="dropdown-item" onclick="changemap(33.729759, -111.431221);">Arizona</button>
+          <button class="dropdown-item" onclick="changemap(34.969704, -92.373123);">Arkansas</button>
+          <button class="dropdown-item" onclick="changemap(36.116203, -119.681564);">California</button>
+          <button class="dropdown-item" onclick="changemap(39.059811, -105.311104);">Colorado</button>
+          <button class="dropdown-item" onclick="changemap(41.597782, -72.755371);">Connecticut</button>
+          <button class="dropdown-item" onclick="changemap(39.318523, -75.507141);">Delaware</button>
+          <button class="dropdown-item" onclick="changemap(38.897438, -77.026817);">District of Columbia</button>
+          <button class="dropdown-item" onclick="changemap(27.766279, -81.686783);">Florida</button>
+          <button class="dropdown-item" onclick="changemap(33.040619, -83.643074);">Georgia</button>
+          <button class="dropdown-item" onclick="changemap(21.094318, -157.498337);">Hawaii</button>
+          <button class="dropdown-item" onclick="changemap(44.240459, -114.478828);">Idaho</button>
+          <button class="dropdown-item" onclick="changemap(40.349457, -88.986137);">Illinois</button>
+          <button class="dropdown-item" onclick="changemap(39.849426, -86.258278);">Indiana</button>
+          <button class="dropdown-item" onclick="changemap(42.011539, -93.210526);">Iowa</button>
+          <button class="dropdown-item" onclick="changemap(38.526600, -96.726486);">Kansas</button>
+          <button class="dropdown-item" onclick="changemap(37.668140, -84.670067);">Kentucky</button>
+          <button class="dropdown-item" onclick="changemap(31.169546, -91.867805);">Louisiana</button>
+          <button class="dropdown-item" onclick="changemap(44.693947, -69.381927);">Maine</button>
+          <button class="dropdown-item" onclick="changemap(39.063946, -76.802101);">Maryland</button>
+          <button class="dropdown-item" onclick="changemap(42.230171, -71.530106);">Massachusetts</button>
+          <button class="dropdown-item" onclick="changemap(43.326618, -84.536095);">Michigan</button>
+          <button class="dropdown-item" onclick="changemap(45.694454, -93.900192);">Minnesota</button>
+          <button class="dropdown-item" onclick="changemap(32.741646, -89.678606);">Mississippi</button>
+          <button class="dropdown-item" onclick="changemap(38.456085, -92.288368);">Missouri</button>
+          <button class="dropdown-item" onclick="changemap(46.921925, -110.454353);">Montana</button>
+          <button class="dropdown-item" onclick="changemap(41.125370, -98.268082);">Nebraska</button>
+          <button class="dropdown-item" onclick="changemap(38.313515, -117.055374);">Nevada</button>
+          <button class="dropdown-item" onclick="changemap(43.452492, -71.563896);">New Hampshire</button>
+          <button class="dropdown-item" onclick="changemap(40.298904, -74.521011);">New Jersey</button>
+          <button class="dropdown-item" onclick="changemap(34.840515, -106.248482);">New Mexico</button>
+          <button class="dropdown-item" onclick="changemap(42.165726, -74.948051);">New York</button>
+          <button class="dropdown-item" onclick="changemap(35.630066, -79.806419);">North Carolina</button>
+          <button class="dropdown-item" onclick="changemap(47.528912, -99.784012);">North Dakota</button>
+          <button class="dropdown-item" onclick="changemap(40.388783, -82.764915);">Ohio</button>
+          <button class="dropdown-item" onclick="changemap(35.565342, -96.928917);">Oklahoma</button>
+          <button class="dropdown-item" onclick="changemap(44.572021, -122.070938);">Oregon</button>
+          <button class="dropdown-item" onclick="changemap(40.590752, -77.209755);">Pennsylvania</button>
+          <button class="dropdown-item" onclick="changemap(41.680893, -71.511780);">Rhode Island</button>
+          <button class="dropdown-item" onclick="changemap(33.856892, -80.945007);">South Carolina</button>
+          <button class="dropdown-item" onclick="changemap(44.299782, -99.438828);">South Dakota</button>
+          <button class="dropdown-item" onclick="changemap(35.747845, -86.692345);">Tennessee</button>
+          <button class="dropdown-item" onclick="changemap(31.054487, -97.563461);">Texas</button>
+          <button class="dropdown-item" onclick="changemap(40.150032, -111.862434);">Utah</button>
+          <button class="dropdown-item" onclick="changemap(44.045876, -72.710686);">Vermont</button>
+          <button class="dropdown-item" onclick="changemap(37.769337, -78.169968);">Virginia</button>
+          <button class="dropdown-item" onclick="changemap(47.400902, -121.490494);">Washington</button>
+          <button class="dropdown-item" onclick="changemap(38.491226, -80.954453);">West Virginia</button>
+          <button class="dropdown-item" onclick="changemap(44.268543, -89.616508);">Wisconsin</button>
+          <button class="dropdown-item" onclick="changemap(42.755966, -107.302490);">Wyoming</button>
+      </div>
+    </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+
+    <div class="row">
+
+        <div class="col-4" style="height: 90vh; background-color: white; overflow-y: scroll;">
+
+
+
+            <ul class="list-group" id="results" style="width: 100%;">
+
+            </ul>
+
+        </div>
+
+        <div class="col-8 map" style="height: 90vh;" id="map">
+
+        </div>
+
+    </div>
+
 </div>
 
-<div class="row marketing">
-  <div class="col-lg-6">
-    <h4>Resources</h4>
-    <ul>
-      <li>
-        <a href="http://phoenixframework.org/docs/overview">Guides</a>
-      </li>
-      <li>
-        <a href="https://hexdocs.pm/phoenix">Docs</a>
-      </li>
-      <li>
-        <a href="https://github.com/phoenixframework/phoenix">Source</a>
-      </li>
-    </ul>
-  </div>
+<script>
 
-  <div class="col-lg-6">
-    <h4>Help</h4>
-    <ul>
-      <li>
-        <a href="http://groups.google.com/group/phoenix-talk">Mailing list</a>
-      </li>
-      <li>
-        <a href="http://webchat.freenode.net/?channels=elixir-lang">#elixir-lang on freenode IRC</a>
-      </li>
-      <li>
-        <a href="https://twitter.com/elixirphoenix">@elixirphoenix</a>
-      </li>
-    </ul>
-  </div>
-</div>
+
+var map = L.map( 'map', {
+    center: [32.7555, -97.3308],
+    minZoom: 8,
+    zoom: 9
+});
+
+
+map.on('moveend', function(e) {
+   var bounds = map.getBounds();
+
+   contained = [];
+   liststr = "";
+
+   for ( i=0; i < markers.length; ++i )
+   {
+       if ( bounds.contains([markers[i].lat, markers[i].lng]) )
+       {
+           liststr += "<li class='list-group-item' style='height: 15vh;'>" + markers[i].name + "\n<a href='" + markers[i].url + "'>" + markers[i].url + "</a></li>";
+       }
+   }
+
+    res = document.getElementById("results");
+    res.innerHTML = liststr;
+
+});
+
+L.tileLayer( 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    subdomains: ['a','b','c']
+}).addTo( map );
+
+
+for ( var i=0; i < markers.length; ++i )
+{
+   L.marker( [markers[i].lat, markers[i].lng] )
+      .bindPopup( '<a href="' + markers[i].url + '" target="_blank">' + markers[i].name + '</a>' )
+      .addTo( map );
+}
+
+var bounds = map.getBounds();
+
+contained = [];
+liststr = "";
+
+for ( i=0; i < markers.length; ++i )
+{
+    if ( bounds.contains([markers[i].lat, markers[i].lng]) )
+    {
+        liststr += "<li class='list-group-item' style='overflow-x: scroll; overflow-y: scroll; width: 100%;'>" + markers[i].name + "\n<a href='" + markers[i].url + "'>" + markers[i].url + "</a></li>";
+    }
+}
+
+res = document.getElementById("results");
+res.innerHTML = liststr;
+
+function changemap(lat, long) {
+    map.panTo(new L.LatLng(lat, long));
+    //map.center = (new L.LatLng(lat, long));
+    //alert("MAP PAN")
+}
+
+</script>
+
+
+</body>
+</html>
