@@ -15,7 +15,10 @@ use Mix.Config
 # which you typically run after static files are built.
 config :campfull, CampfullWeb.Endpoint,
   load_from_system_env: false,
-  url: [host: "example.com", port: 80],
+  url: [host: "campfull.com", port: 80],
+  server: true, 
+  root: ".",
+  version: Application.spec(:campfull, :vsn),
   cache_static_manifest: "priv/static/cache_manifest.json"
 
 # Do not print debug messages in production
