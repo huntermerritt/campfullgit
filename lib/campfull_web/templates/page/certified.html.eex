@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Hello Campfull!</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin=""/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js" integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q==" crossorigin=""></script>
+    <link rel="icon" 
+      type="image/png" 
+      href="/images/clogo.png">
+
+
+
+</head>
+<style>
+    body
+    {
+
+        background-image: url("/images/back.jpg");
+        background-size: cover;
+        font-family: 'Roboto', sans-serif;
+    }
+
+
+</style>
+<body>
+<sci>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="height: 10vh;">
+    <img src="/images/clogo.png" class="navbar-brand" alt="Camp Out" style="max-height: 10vh;">
+    <a href="/" class="nav-link btn btn-outline-secondary">Search</a>
+    <a href="/about" class="nav-link btn btn-outline-secondary">About</a>
+    <a href="/certified" class="nav-link btn btn-outline-secondary">Get Certified Campground</a>
+</nav>
+
+<div class="container-fluid">
+
+    <div class="row">
+
+        <div class="col-2"></div>
+
+        <div class="col-8" style="height: 90vh; background-color: white; overflow-y: scroll;">
+
+            
+
+            <div style="height: 10vh;"></div>
+
+
+            <h3 style="text-align: center;">Certified Campground Program</h3>
+            <hr>
+
+            <div class="row">
+
+                <div class="col-4">
+                    <h5>Search Results</h5>
+                    <hr>
+                    <ul class="list-group">
+                        <li class="list-group-item">Certified Campgrounds appear at the top of search results.</li>
+                        <li class="list-group-item">Helps prospective campgrounds find your campsite.</li>
+                    </ul>
+                </div>
+
+                <div class="col-4">
+                    <h5>Consistency</h5>
+                    <hr>
+                    <ul class="list-group">
+                        <li class="list-group-item">Garuntee that your campground shows up on the map.</li>
+                        <li class="list-group-item">More accurate location matching.</li>
+
+                    </ul>
+
+                </div>
+
+                <div class="col-4">
+                    <h5>Traffic</h5>
+                    <hr>
+                    <ul class="list-group">
+                        <li class="list-group-item">Certification helps drive more campers to your website.</li>
+                        <li class="list-group-item">Campers are more likely to book their camping trips when directed to your site.</li>
+                    </ul>
+
+                </div>
+
+
+            </div>
+
+            <hr>
+            <br>
+
+            <p>The Certified Campground Program costs $120 / Year per campground.</p>
+            <p>Discounts are available for multiple camgrounds.</p>
+
+            <div style="height: 10vh;"></div>
+
+            <form target="hiddenFrame" action="https://maker.ifttt.com/trigger/newcampground/with/key/dRZuw1dAagVfn5Xgzl9Z-sVSlP4dbrln-cPYJwDQNwG" method="post" type="application/json">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" name="value1" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Campground address</label>
+                    <input type="text" name="value2" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="555 South Main Street, Normal Illinois">
+                    <small id="emailHelp" class="form-text text-muted">Let's us know where to place your campground.</small>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Campground website</label>
+                    <input type="text" name="value3" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="www.happycampers.com">
+                    <small id="emailHelp" class="form-text text-muted">Let's us know where to send campers.</small>
+                </div>
+                <button type="submit" class="btn btn-primary" onclick="window.location.href = '/';">Submit</button>
+            </form>
+
+            <br>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

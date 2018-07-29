@@ -17,6 +17,10 @@ defmodule CampfullWeb.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+
+    get "/about", PageController, :about
+
+    get "/certified", PageController, :certified
   end
 
   # Other scopes may use custom stacks.

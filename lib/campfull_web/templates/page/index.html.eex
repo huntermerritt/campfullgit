@@ -100,6 +100,8 @@
       </div>
     </div>
     </div>
+    <a href="/about" class="nav-link btn btn-outline-secondary">About</a>
+    <a href="/certified" class="nav-link btn btn-outline-secondary">Get Certified Campground</a>
 </nav>
 
 <div class="container-fluid">
