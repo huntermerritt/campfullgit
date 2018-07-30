@@ -63,11 +63,11 @@
                 <div class="col-4">
                     <h4 style="text-align: center;">What We Do:</h4>
                     <hr>
-                    <p>We build software to help campers find campgrounds as well as campgrounds connect with
-                    prospective campers. It is much harder to find find a campground than a hotel or vacation rental 
-                    because of the lack of a central authority. We gather campground information from around the internet
-                     to help people find campgrounds wherever they would like to go. This helps campgrounds get discovered 
-                     and drives more bookings.</p>
+                    <p>We build software to help campers find campgrounds, as well as connect campgrounds with
+                    prospective campers. It is harder to find a campground than a hotel or vacation rental 
+                    due to the lack of a central authority. We gather campground information from around the internet
+                     to help people find campgrounds located near their travel destination. Campfull helps campgrounds get discovered 
+                     and leads to more bookings.</p>
                 
                 </div>
 
@@ -75,18 +75,17 @@
                     <h4 style="text-align: center;">Who We Are:</h4>
                     <hr>
                     <p>We are software developers who have a passion for camping and the great outdoors. We were frustrated 
-                    with how difficult it is to find different campgrounds when travelling and ended up spending too much time 
-                    searching and researching.</p>
+                    with how difficult and tedious it was to find campgrounds near our travel destinations. Campfull has greatly decreased 
+                    the amount of time and frustration we have experienced while researching campgrounds.</p>
 
                 </div>
 
                 <div class="col-4">
                     <h4 style="text-align: center;">Why We Do It:</h4>
                     <hr>
-                    <p>We want it to be as easy as possible for people to find campgrounds based 
-                    on where they are going. This is accomplished through our map which let's people 
-                    find all the campgrounds in any area of the United States. We think it should be as 
-                    easy to find a campground as it is a hotel online.</p>
+                    <p>We think it should be as easy to find a campground as it is a hotel online. The great outdoors is where 
+                    adventures happen and we want to enable these experiences. We do this through making it as easy as 
+                    possible to find the campground you have been looking for.</p>
 
                 </div>
             

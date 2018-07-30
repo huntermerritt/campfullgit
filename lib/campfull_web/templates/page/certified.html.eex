@@ -59,6 +59,8 @@
 
 
             <h3 style="text-align: center;">Certified Campground Program</h3>
+            <p>This is a program where you, as a campground owner, can register your campground on our website. 
+            We want your campground to be more accessible to prospecitve campers and travellers.</p>
             <hr>
 
             <div class="row">
@@ -68,7 +70,7 @@
                     <hr>
                     <ul class="list-group">
                         <li class="list-group-item">Certified Campgrounds appear at the top of search results.</li>
-                        <li class="list-group-item">Helps prospective campgrounds find your campsite.</li>
+                        <li class="list-group-item">Helps prospective campers find your campsite.</li>
                     </ul>
                 </div>
 
